@@ -16,9 +16,9 @@ price = 0
 
 if yn == "y":      # 세트 구매 시
     for k in range(1, num+1):
-        price = k*5000
+        price = num*5000
         if price > 100000:
-            print("일일 최대 한도를 넘어섰습니다. 과도한 도박은 좋지 않습니다. 가볍게 즐겨주세요 ‎(*˙︶˙*)و")
+            print(f"{'-'*50}\n일일 최대 한도를 넘어섰습니다. 과도한 도박은 좋지 않습니다. 가볍게 즐겨주세요 ‎(*˙︶˙*)و")
             break
         else:
             data = []
@@ -31,13 +31,14 @@ if yn == "y":      # 세트 구매 시
                     result.append(random_pop(data))
                 
                 print(f"{i}: 행운의 로또 번호는 {sorted(result)}입니다.")
-        print(f"{'-'*50}\n총 금액: {price}원입니다.")
+    print(f"{'-'*50}\n총 금액: {price}원입니다.")
 
 elif yn == "n":    # 한 줄 구매 시
     cnt = 0
     data = []
     for i in range(1, 46):
         data.append(i)
+    print('-'*50)
     for i in ['A', 'B', 'C', 'D', 'E']:
         result = []        
         if cnt == num: break
