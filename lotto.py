@@ -37,8 +37,7 @@ if yn == "y":      # 세트 구매 시
                 
                 print(f"{i}: 행운의 로또 번호는 {sorted(result)}입니다.")
     print(f"{'-'*50}\n총 금액: {price}원입니다.")
-
-elif yn == "n":    # 한 줄 구매 시
+else:              # 한 줄 구매 시
     cnt = 0
     data = []
     for i in range(1, 46):
@@ -53,5 +52,3 @@ elif yn == "n":    # 한 줄 구매 시
         cnt += 1
     price += num*1000
     print(f"{'-'*50}\n총 금액: {price}원입니다.")
-else:
-    print("sys.argv[1]에는 y 또는 n으로 입력해 주세요.")
