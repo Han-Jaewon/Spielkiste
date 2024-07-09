@@ -3,8 +3,13 @@ import random
 
 # % python lotto.py {y/n} {num}    - y/n: 세트 구매(y) 한 줄 구매(n)  - num: 몇 장(줄) 구매?
 
-yn = sys.argv[1]    # "y" or "n" 입력
-num = int(sys.argv[2])    # 숫자 입력
+# argv[1], argv[2] 초기값 설정
+if len(sys.argv[1:]) == 0:
+    yn = "n"
+    num = 5
+else:
+    yn = sys.argv[1]    # "y" or "n" 입력
+    num = int(sys.argv[2])    # 숫자 입력
 
 # 랜덤 번호 추출
 def random_pop(data):
